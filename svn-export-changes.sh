@@ -1,15 +1,18 @@
 #!/bin/bash
 
-if [ ! $1 ] || [ ! $2 ] || [ ! $3 ] || [ ! $4 ]; then
-    echo "Please enter a revision from, revision to, SVN repository, and target directory"
+if [ ! $1 ] || [ ! $2 ]; then
+    echo "Please enter a revision from number and SVN repository"
     exit
 fi
 
 # set up nice names for the incoming parameters to make the script more readable
 revision_from=$1
-revision_to=$2
-repository=$3
+repository=$2
+revision_to=$3
 target_directory=$4
+
+: ${revision_to:="HEAD"} 
+: ${target_directory:="export"} 
 
 # the grep is needed so we only get added/modified files and not the deleted ones or anything else
 # if it's a modified directory it's " M" so won't show with this command (good)
