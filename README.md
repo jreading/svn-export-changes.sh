@@ -25,7 +25,7 @@ You can pass in a range of revisions and a location to export to.
 
 That's it.
 
-Portions taken from [this post](http://www.electrictoolbox.com/subversion-export-changed-files-cli/) (can't find the author).
+Portions taken from [this post](http://www.electrictoolbox.com/subversion-export-changed-files-cli/) Thanks to Chris Hope.
 
 
 
